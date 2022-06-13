@@ -59,11 +59,31 @@
 
                                                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ (new DateTime($users->login))->format( 'd-m-Y' )  }}</td>
 
+                                                        <form style="display: none" action="{{ route('ban') }}" method="post">
+                                                            @csrf
+                                                            <input type="hidden" name="uuid" value="{{ $users->id }}">
+                                                            <button id="Ban{{ $users->id }}" type="submit"></button>
+                                                        </form>
+
+                                                        <form style="display: none" action="{{ route('destroy') }}" method="post">
+                                                            @csrf
+                                                            <input type="hidden" name="uuid" value="{{ $users->id }}">
+                                                            <button id="Delete{{ $users->id }}" type="submit"></button>
+                                                        </form>
+
                                                         <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right font-medium sm:pr-6">
-                                                            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</a>
-                                                            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Apagar</a>
-                                                            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver Mais</a>
-                                                            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Banir</a>
+
+                                                            {{-- <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</a>
+                                                            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver Mais</a> --}}
+
+                                                            <button onclick="document.getElementById('Delete{{ $users->id }}').click()" class="text-white bg-red-600 bg-red-600 hover:bg-red-700 font-bold py-2 px-4 rounded">Apagar</button>
+
+                                                            @if ($users->status)
+                                                                <button onclick="document.getElementById('Ban{{ $users->id }}').click()" class="text-white bg-red-600 bg-red-600 hover:bg-red-700 font-bold py-2 px-4 rounded">Banir</button>
+                                                            @else
+                                                                <button onclick="document.getElementById('Ban{{ $users->id }}').click()" class="text-white bg-green-600 bg-green-600 hover:bg-green-700 font-bold py-2 px-4 rounded">Ativar</button>
+                                                            @endif
+
                                                         </td>
 
                                                     </tr>

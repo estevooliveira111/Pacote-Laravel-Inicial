@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use Illuminate\Http\Request;
 
 class ControllerUser extends Controller
 {
@@ -74,14 +75,39 @@ class ControllerUser extends Controller
         //
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Request $request)
     {
-        //
+        $user = User::where('id', $request->uuid)->firstOrFail();
+        $user->delete();
+
+        return redirect()->route('index');
     }
+
+
+    public function ban(Request $request)
+    {
+        $user = User::where('id', $request->uuid)->firstOrFail();
+
+        if($user->status){
+            $user->update([
+                "status" => 0
+            ]);
+        } else{
+            $user->update([
+                "status" => 1
+            ]);
+        }
+        
+        return redirect()->route('index');
+    }
+
+
 }
+

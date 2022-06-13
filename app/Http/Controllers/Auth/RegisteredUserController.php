@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'IP'       => $_SERVER['REMOTE_ADDR'],
-            'logalt'   => date('Y-m-d'),
+            'login'   => date('Y-m-d'),
             'status'   => 1
         ])->givePermissionTo('user');
 

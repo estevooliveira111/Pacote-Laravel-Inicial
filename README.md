@@ -28,7 +28,9 @@
 
 # Criar CRUD Completo
 
-    php artisan make:controller ControllerNomeDoController --model=nomeDoModal --resource --requests
+    php artisan make:controller ControllerEmail --model=nomeDoModal --resource --requests
 <br />
 
     php artisan make:controller ControllerUser --model=User --resource --requests
+
+

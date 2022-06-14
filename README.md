@@ -3,7 +3,7 @@
 
     git clone https://github.com/estevooliveira111/KitInicial
 
-    <br />
+<br />
 
     composer create-project laravel/laravel nome-do-seu-projeto --prefer-dist
 

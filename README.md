@@ -10,6 +10,7 @@
     composer install --no-scripts
 
 > Copie o arquivo .env.example
+
     cp .env.example .env
 
 > Crie uma nova chave para a aplicação

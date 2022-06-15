@@ -18,7 +18,6 @@ class SeedUser extends Seeder
      */
     public function run()
     {
-
         User::create([
             'name' => 'admin',
             'email' => 'admin@email.com',

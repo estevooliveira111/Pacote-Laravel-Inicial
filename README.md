@@ -3,7 +3,7 @@
 
 > Clonar Projeto
 
-    git clone https://github.com/estevooliveira111/KitInicial
+    git clone https://github.com/estevooliveira111/Pacote-Laravel-Inicial
 
 <br />
 

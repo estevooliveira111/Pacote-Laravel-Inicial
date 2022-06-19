@@ -17,7 +17,6 @@ Route::middleware(['auth', 'status'])->group(function(){
     {
         Route::get('/usuarios', 'index')->name('index');
 
-
         Route::post('/banir', 'ban')->name('banned');
         Route::post('/delete', 'destroy')->name('destroy');
 

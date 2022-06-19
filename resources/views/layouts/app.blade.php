@@ -9,14 +9,13 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
         <script src="https://cdn.tailwindcss.com"></script>        
 
         <link rel="apple-touch-icon" href="{{ asset('img/icon.svg') }}">    
+        <link rel="icon" type="image/png" href="{{ asset('img/icon.svg') }}"> 
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>

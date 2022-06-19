@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    
+
         <link rel="apple-touch-icon" href="{{ asset('img/icon.svg') }}">    
         <link rel="icon" type="image/png" href="{{ asset('img/icon.svg') }}">
 
@@ -20,9 +20,7 @@
         @yield('style')
 
     </head>
-    
     <body class="h-full">
-    <body>
 
         @yield('app')
 

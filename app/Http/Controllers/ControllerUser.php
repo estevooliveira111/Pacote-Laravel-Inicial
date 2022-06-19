@@ -17,7 +17,7 @@ class ControllerUser extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index', compact('users'));
+        return view('admin.user.index', compact('users'));
     }
 
     /**
@@ -84,6 +84,7 @@ class ControllerUser extends Controller
      */
     public function destroy(Request $request)
     {
+
         $user = User::where('id', $request->uuid)->firstOrFail();
         $user->delete();
 
@@ -93,6 +94,7 @@ class ControllerUser extends Controller
 
     public function ban(Request $request)
     {
+
         $user = User::where('id', $request->uuid)->firstOrFail();
 
         if($user->status){

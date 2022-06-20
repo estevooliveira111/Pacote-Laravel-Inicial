@@ -18,6 +18,11 @@
     php artisan migrate --seed
 
 <br />
+> Copie o arquivo .env.example
+
+    cp .env.example .env
+
+<br />
 <br />
 
 ## Criar CRUD Completo

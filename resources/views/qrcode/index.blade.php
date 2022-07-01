@@ -1,3 +1,5 @@
+@php $numero = rand(1, 10000000000000000); @endphp
+
 <x-app-layout>
 
     <x-slot name="header">
@@ -5,12 +7,6 @@
             {{ __('QRcode') }}
         </h2>
     </x-slot>
-
-    @php
-
-        $numero =  rand(1, 10000000000000000);
-
-    @endphp
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">

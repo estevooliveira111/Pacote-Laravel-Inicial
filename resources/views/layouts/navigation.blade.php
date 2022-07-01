@@ -17,6 +17,13 @@
                     </x-nav-link>
                 </div>
 
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('qrcode.index')" :active="request()->routeIs('qrcode.index')">
+                        {{ __('QRcode') }}
+                    </x-nav-link>
+                </div>
+
                 @can('admin')
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">

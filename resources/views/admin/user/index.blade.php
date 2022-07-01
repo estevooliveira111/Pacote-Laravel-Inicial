@@ -19,6 +19,7 @@
                             <p class="mt-2 text-sm text-gray-700">Lista de todos os usuários em sua conta, Nome, Email e IP</p>
                         </div>
                     </div>
+
                     <script src="https://cdn.tailwindcss.com"></script>
 
                     <!-- This example requires Tailwind CSS v2.0+ -->

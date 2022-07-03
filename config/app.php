@@ -156,6 +156,8 @@ return [
 
     'providers' => [
 
+        \Torann\GeoIP\GeoIPServiceProvider::class,
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -209,6 +211,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
